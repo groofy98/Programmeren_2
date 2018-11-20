@@ -1,0 +1,7 @@
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\bin\Debug\Opdracht 1.exe.config
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\bin\Debug\Opdracht 1.exe
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\bin\Debug\Opdracht 1.pdb
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\obj\Debug\Opdracht 1.csprojAssemblyReference.cache
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\obj\Debug\Opdracht 1.csproj.CoreCompileInputs.cache
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\obj\Debug\Opdracht 1.exe
+C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 1\obj\Debug\Opdracht 1.pdb
