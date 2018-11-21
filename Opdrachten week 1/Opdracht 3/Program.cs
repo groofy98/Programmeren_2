@@ -19,7 +19,8 @@ namespace Opdracht_3
         {
             YahtzeeGame yahtzeeGame = new YahtzeeGame();
             yahtzeeGame.Init();
-            SpeelYahtzee(yahtzeeGame);
+            SpeelYahtzee(yahtzeeGame);
+
             Console.ReadKey();
         }
 
@@ -31,8 +32,10 @@ namespace Opdracht_3
                 game.Gooi(); // gooi dobbelstenen
                 game.ToonWorp(); // toon worp
                 aantalPogingen++;
-            } while (!game.ThreeOfAKind());
-            Console.WriteLine("Aantal pogingen nodig voor yahtzee: {0}", aantalPogingen);
+            } while (!game.Yahtzee() && !game.ThreeOfAKind() && !game.FourOfAKind());
+            Console.WriteLine("Aantal pogingen nodig voor {0}: {1}", (game.ThreeOfAKind() ? "Three of a kind" : game.FourOfAKind() ? "Four of a kind" : "Yahtzee"), aantalPogingen);
+            Console.ReadKey();
+            Start();
         }
     }
 }

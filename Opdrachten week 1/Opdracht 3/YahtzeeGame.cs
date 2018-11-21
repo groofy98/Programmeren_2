@@ -40,8 +40,22 @@ namespace Opdracht_3
 
         public bool ThreeOfAKind()
         {
-            if (CountEquals() >= 3)
+            if (CountEquals() == 3)
+            {
                 return true;
+            }
+
+            else return false;
+        }
+
+
+        public bool FourOfAKind()
+        {
+            if (CountEquals() == 4)
+            {
+                return true;
+            }
+
             else return false;
         }
 

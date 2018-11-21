@@ -22,7 +22,8 @@ namespace opdracht_0
             Console.WriteLine("Je bent {0} jaar oud.", leeftijd);
             string naam = LeesString("Hoe heet je? ");
             Console.WriteLine("Aangenaam kennis met je te maken, {0}.", naam);
-            Console.ReadKey();
+            Console.ReadKey();
+
         }
 
         static int LeesInt(string vraag)
@@ -33,11 +34,12 @@ namespace opdracht_0
 
         static int LeesInt(string vraag, int min, int max)
         {
-            int temp = LeesInt(vraag);
-            if (temp > min && temp < max)
-                return temp;
-            else
-                return LeesInt(vraag, min, max);
+            int leeftijd;
+            do
+            {
+                leeftijd = LeesInt(vraag);
+            } while (leeftijd < min || leeftijd > max);
+            return leeftijd;
         }
 
         static string LeesString(string vraag)

@@ -5,3 +5,10 @@ C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opd
 C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.csproj.CoreCompileInputs.cache
 C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.exe
 C:\Users\groof\Desktop\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.pdb
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\bin\Debug\Opdracht 3.exe.config
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\bin\Debug\Opdracht 3.exe
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\bin\Debug\Opdracht 3.pdb
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.csprojAssemblyReference.cache
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.csproj.CoreCompileInputs.cache
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.exe
+C:\Users\groof\OneDrive\inholland\Programming\programmeren_2\Programmeren_2\Opdrachten week 1\Opdracht 3\obj\Debug\Opdracht 3.pdb

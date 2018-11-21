@@ -13,7 +13,7 @@ namespace Opdracht_3
 
         public void Gooi()
         {
-            waarde = rnd.Next(1,6);
+            waarde = rnd.Next(1,7);
         }
 
         public void ToonWaarde()
