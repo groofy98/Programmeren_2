@@ -26,6 +26,8 @@ namespace Opdracht_2
             {
                 PrintPersoon(p);
             }
+            VierVerjaardag(ref personen[0]);
+            PrintPersoon(personen[0]);
             Console.ReadKey();
         }
 
@@ -73,6 +75,13 @@ namespace Opdracht_2
         {
             Console.Write(vraag);
             return Console.ReadLine();
+        }
+
+        void VierVerjaardag(ref Persoon p)
+        {
+            p.Leeftijd++;
+            Console.WriteLine("Verjaardag vieren van {0} {1}...", p.Voornaam, p.Achternaam);
+            //PrintPersoon(p);
         }
 
     }
