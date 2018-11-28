@@ -17,8 +17,7 @@ namespace Opdracht_4
         void Start()
         {
             int[,] schaakbord = new int[8, 8];
-            InitSchaakbord(schaakbord);
-            
+            InitSchaakbord(schaakbord);            
             MogelijkePaardenSprongen( schaakbord, PlaatsPaard(schaakbord));
             ToonSchaakbord(schaakbord);
             Console.ReadKey();
