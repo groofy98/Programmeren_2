@@ -99,7 +99,7 @@ namespace Opdracht_3
                         count++;
                         if (count == 3)
                         {
-                            Console.WriteLine("Rij: {0}", i);
+                            Console.WriteLine("Rij: {0}", i + 1);
                             return true;
                         }
                         
@@ -129,7 +129,7 @@ namespace Opdracht_3
                         count++;
                         if (count == 3)
                         {
-                            Console.WriteLine("Kolom: {0}", i);
+                            Console.WriteLine("Kolom: {0}", i + 1);
                             return true;
                         }
                         

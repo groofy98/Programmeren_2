@@ -17,7 +17,7 @@ namespace opdracht_1
 
         void Start()
         {
-            int[,] matrix = new int[11, 11];
+            int[,] matrix = new int[3, 7];
             InitMatrix2D(matrix);
             PrintMatrix(matrix);
             Console.WriteLine("\n");
@@ -57,16 +57,13 @@ namespace opdracht_1
         }
 
         void InitMatrixLineair(int[,] matrix)
-        {
-            int row = 0;
+        {            
             int width = matrix.GetLength(0);
             int height = matrix.GetLength(1);
             int last = width * height;
             for (int i = 1; i <= last; i++)
             {
-                matrix[(i - (row * width) - 1), row] = i;
-                if ((i % width) == 0)
-                    row++;
+                matrix[(i - 1)/height, (i -1)%width] = i;                
             }
         }
 
