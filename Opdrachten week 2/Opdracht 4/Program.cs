@@ -78,36 +78,25 @@ namespace Opdracht_4
             p.y = r.Next(0, 7);
             schaakbord[p.x, p.y] = 1;
             return p;
-        }        void MogelijkePaardenSprongen(int[,] schaakbord, Positie positie)
-        {
-            Positie[] posities = new Positie[8];
-            for (int i = 0; i < 8; i++)
-            {
-                posities[i] = new Positie();
-            }
-            posities[0].y = 2; posities[0].x = -1;
-            posities[1].y = 1; posities[1].x = -2;
-            posities[2].y = -1; posities[2].x = -2;
-            posities[3].y = -2; posities[3].x = -1;
-            posities[4].y = -2; posities[4].x = 1;
-            posities[5].y = -1; posities[5].x = 2;
-            posities[6].y = 1; posities[6].x = 2;
-            posities[7].y = 2; posities[7].x = 1;
+        }
 
-            foreach (Positie p in posities)
+        void MogelijkePaardenSprongen(int[,] schaakbord, Positie positie)
+        {            
+            for (int r = -2; r <=  2; r++)
             {
-                try
+                for (int c = -2; c <= 2; c++)
                 {
-                    Positie temp = new Positie();
-                    temp.x = positie.x + p.x;
-                    temp.y = positie.y + p.y;
-                    schaakbord[temp.x, temp.y] = 2;
-                }
-                catch
-                {
-
+                    if (Math.Abs(r*c) == 2)
+                    {
+                        try
+                        {
+                            schaakbord[(positie.x + c), (positie.y + r)] = 2;
+                        }
+                        catch { }
+                    }
                 }
             }
-        }
+        }
+
     }
 }
