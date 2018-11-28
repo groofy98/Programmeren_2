@@ -82,7 +82,9 @@ namespace Opdracht_3
             }
             Console.ResetColor();
             Console.WriteLine();
-        }        bool ScoreRijAanwezig(RegularCandies[,] speelveld)
+        }
+
+        bool ScoreRijAanwezig(RegularCandies[,] speelveld)
         {
             int width = speelveld.GetLength(0);
             int height = speelveld.GetLength(1);
@@ -110,7 +112,9 @@ namespace Opdracht_3
                 }
             }
             return false;
-        }        bool ScoreKolomAanwezig(RegularCandies[,] speelveld)
+        }
+
+        bool ScoreKolomAanwezig(RegularCandies[,] speelveld)
         {
             int width = speelveld.GetLength(0);
             int height = speelveld.GetLength(1);
@@ -138,7 +142,8 @@ namespace Opdracht_3
                 }
             }
             return false;
-        }
+        }
+
 
 
     }
