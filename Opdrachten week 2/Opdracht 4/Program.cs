@@ -53,12 +53,12 @@ namespace Opdracht_4
                             break;
                         case 1:
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write("*");
+                            Console.Write("* ");
                             Console.ResetColor();
                             break;
                         case 2:
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.Write("*");
+                            Console.Write("* ");
                             Console.ResetColor();
                             break;
                         default:
