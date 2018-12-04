@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="galgjewoorden.txt" />
+    <Content Include="woorden.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

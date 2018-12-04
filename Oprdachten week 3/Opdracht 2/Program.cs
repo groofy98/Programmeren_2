@@ -15,11 +15,11 @@ namespace Opdracht_2
         }
 
         void Start()
-        {           
+        {
             List<string> woordenLijst = WoordenLijst();
             GalgjeSpel galgje = new GalgjeSpel();
             galgje.Init(SelecteerWoord(woordenLijst));
-            Console.WriteLine(SpeelGalgje(galgje) ? "Je hebt gewonnen!" : "Helaas je hebt verloren");            
+            Console.WriteLine(SpeelGalgje(galgje) ? "Je hebt gewonnen!" : ("Helaas je hebt verloren het woord was: {0}"), galgje.geheimWoord);
             Console.ReadKey();
             Start();
         }
@@ -27,10 +27,10 @@ namespace Opdracht_2
         bool SpeelGalgje(GalgjeSpel galgje)
         {
             int pogingen = 8;
-            ToonWoord(galgje.geheimWoord);
+            //ToonWoord(galgje.geheimWoord);
             ToonWoord(galgje.geradenWoord);
             do
-            {                
+            {
                 char temp = LeesLetter(galgje.ingevoerdeLetters);
                 galgje.ingevoerdeLetters.Add(temp);
                 if (!galgje.RaadLetter(temp))
@@ -39,8 +39,6 @@ namespace Opdracht_2
                 ToonWoord(galgje.geradenWoord);
                 Console.WriteLine("Aantal pogingen over: {0}\n", pogingen);
             } while (!galgje.IsGeraden() && pogingen != 0);
-            
-
             return galgje.IsGeraden();
         }        void ToonWoord(string woord)
         {
@@ -57,7 +55,7 @@ namespace Opdracht_2
             foreach (char c in letters)
                 temp += (c + " ");
             Console.WriteLine("ingevoerde letters: " + temp);
-            
+
         }        char LeesLetter(List<char> verbodenLetters)
         {
             char letter;
@@ -77,18 +75,18 @@ namespace Opdracht_2
         }
 
         List<string> WoordenLijst()
-        {   
-            
+        {
             List<string> l = new List<string>();
             string line;
             System.IO.StreamReader file =
-                new System.IO.StreamReader(@"..\\..\\galgjewoorden.txt");
+                new System.IO.StreamReader(@"..\\..\\woorden.txt");
             while ((line = file.ReadLine()) != null)
-            {
-                l.Add(line);
+            {   
+                if (line.Length >= 3 )
+                    l.Add(line);
             }
 
-            file.Close();            
+            file.Close();
 
             return l;
         }
