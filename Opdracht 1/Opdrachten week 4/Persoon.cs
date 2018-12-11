@@ -24,27 +24,30 @@ namespace Opdrachten_week_4
         {
             Persoon p = new Persoon();
             p.naam = n;
+            Console.WriteLine("Welkom {0}!",n);
             p.woonplaats = LeesString("Waar woont u? ");
-            p.leeftijd = LeesInt("Wat is is uw leeftijd?");
+            p.leeftijd = LeesInt("Wat is is uw leeftijd?" );
+            SchrijfPersoon(p, n);
             return p;
         }
 
-        void ToonPersoon(Persoon p)
+        public void ToonPersoon(Persoon p)
         {
             Console.WriteLine("Naam       : {0}", p.naam);
             Console.WriteLine("Woonplaats : {0}", p.woonplaats);
             Console.WriteLine("Leeftijd   : {0}", p.leeftijd);
         }
 
-        void SchrijfPersoon(Persoon p, string bestandsNaam)
+        public void SchrijfPersoon(Persoon p, string bestandsNaam)
         {
             System.IO.StreamWriter file = new System.IO.StreamWriter(@"..\\..\\" + p.naam + ".txt");
             file.WriteLine(p.naam);
             file.WriteLine(p.woonplaats);
             file.WriteLine(p.leeftijd);
+            file.Close();
         }
 
-        Persoon LeesPersoonBestand(string bestandsNaam)
+        public Persoon LeesPersoonBestand(string bestandsNaam)
         {
            
             try
@@ -55,6 +58,7 @@ namespace Opdrachten_week_4
                 p.naam = file.ReadLine();
                 p.woonplaats = file.ReadLine();
                 int.TryParse(file.ReadLine(), out p.leeftijd);
+                Console.WriteLine("Wat leuk je weer te zien {0}", bestandsNaam);
                 return p;
             }
             catch {

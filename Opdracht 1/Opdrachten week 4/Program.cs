@@ -17,6 +17,12 @@ namespace Opdrachten_week_4
         void Start()
         {
             Console.WriteLine("Wat is uw naam? ");
+            string temp = Console.ReadLine();
+            Persoon p = new Persoon();
+            p = p.LeesPersoonBestand(temp);
+            p.ToonPersoon(p);
+            Console.ReadKey();
+            Start();
         }
     }
 }
