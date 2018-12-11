@@ -40,7 +40,9 @@ namespace Opdracht_2
                 Console.WriteLine("Aantal pogingen over: {0}\n", pogingen);
             } while (!galgje.IsGeraden() && pogingen != 0);
             return galgje.IsGeraden();
-        }        void ToonWoord(string woord)
+        }
+
+        void ToonWoord(string woord)
         {
             Console.WriteLine();
             char[] chars = woord.ToCharArray();
@@ -49,14 +51,18 @@ namespace Opdracht_2
                 Console.Write(c + " ");
             }
             Console.WriteLine("\n");
-        }        void ToonLetters(List<char> letters)
+        }
+
+        void ToonLetters(List<char> letters)
         {
             string temp = "";
             foreach (char c in letters)
                 temp += (c + " ");
             Console.WriteLine("ingevoerde letters: " + temp);
 
-        }        char LeesLetter(List<char> verbodenLetters)
+        }
+
+        char LeesLetter(List<char> verbodenLetters)
         {
             char letter;
             do
@@ -66,7 +72,9 @@ namespace Opdracht_2
 
             } while (verbodenLetters.Contains(letter));
             return letter;
-        }
+        }
+
+
 
         string SelecteerWoord(List<string> woorden)
         {

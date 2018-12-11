@@ -25,7 +25,7 @@ namespace Opdracht_1
         }
 
         public Vak LeesVak(string vraag)
-        {
+        {   
             Console.WriteLine(vraag);
             naam = LeesString("Naam van het vak: ");
             cijfer = LeesInt("Cijfer voor " + naam + ": ");
