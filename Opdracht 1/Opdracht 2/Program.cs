@@ -69,6 +69,7 @@ namespace Opdracht_2
         {
             Console.Write(vraag);
             return Console.ReadLine();
-        }
+        }
+
     }
 }

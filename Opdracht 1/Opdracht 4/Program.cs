@@ -19,15 +19,80 @@ namespace Opdracht_3
 
         void Start()
         {
-            RegularCandies[,] speelveld = new RegularCandies[9, 9];
-            InitCandies(ref speelveld);
+            RegularCandies[,] speelveld;
+
+            try
+            {
+                speelveld = LeesSpeelveld("speelvelden");
+            }
+            catch
+            {
+                speelveld = new RegularCandies[9, 9];
+                InitCandies(ref speelveld);
+            }
             PrintCandies(speelveld);
-            if(ScoreRijAanwezig(speelveld))
+            if (ScoreRijAanwezig(speelveld))
                 Console.WriteLine("Score rij aanwezig!");
             if (ScoreKolomAanwezig(speelveld))
                 Console.WriteLine("Score Kolom aanwezig!");
+            SchrijfSpeelveld(speelveld, "speelvelden");
+
             Console.ReadKey();
             Start();
+        }
+
+        void SchrijfSpeelveld(RegularCandies[,] speelveld, string bestandsnaam)
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"..\\..\\" + bestandsnaam + ".txt");
+            try
+            {
+                file.WriteLine(speelveld.GetLength(0));
+                file.WriteLine(speelveld.GetLength(1));
+                int width = speelveld.GetLength(0);
+                int height = speelveld.GetLength(1);
+                for (int i = 0; i < height; i++)
+                {
+                    string temp = "";
+                    for (int b = 0; b < width; b++)
+                    {
+                        temp += (int)speelveld[b, i] + " ";
+                    }
+                    file.WriteLine(temp);
+                }
+                file.Close();
+            }
+            catch
+            {
+                file.Close();
+            }
+        }
+
+        RegularCandies[,] LeesSpeelveld(string bestandsnaam)
+        {
+            System.IO.StreamReader file = new System.IO.StreamReader(@"..\\..\\" + bestandsnaam + ".txt");
+            try
+            {
+                string[] line;
+                RegularCandies[,] speelveld = new RegularCandies[int.Parse(file.ReadLine()), int.Parse(file.ReadLine())];
+
+                for (int i = 0; i < speelveld.GetLength(1); i++)
+                {
+                    line = file.ReadLine().Split(' ');
+                    for (int b = 0; b < speelveld.GetLength(0); b++)
+                    {
+                        speelveld[b, i] = (RegularCandies)int.Parse(line[b]);
+                    }
+                }
+                file.Close();
+                return speelveld;
+            }
+            finally
+            {
+                file.Close();
+                
+            }
+            
+
         }
 
         void InitCandies(ref RegularCandies[,] speelveld)
@@ -102,9 +167,9 @@ namespace Opdracht_3
                             Console.WriteLine("Rij: {0}", i + 1);
                             return true;
                         }
-                        
-                           
-                        
+
+
+
                     }
                     else count = 1;
                     candy = speelveld[b, i];
@@ -132,7 +197,7 @@ namespace Opdracht_3
                             Console.WriteLine("Kolom: {0}", i + 1);
                             return true;
                         }
-                        
+
 
 
                     }
