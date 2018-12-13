@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opdracht_2
+namespace Opdracht_3
 {
     class Program
     {
@@ -17,9 +17,9 @@ namespace Opdracht_2
         }
 
         void Start()
-        {   
+        {
             Console.WriteLine("\nAantal berichten gevonden: {0}", ZoekWoordInBestand("..\\..\\trump.txt", LeesString("Welk woord wil je zoeken?: ")));
-            
+
             Start();
         }
 
@@ -33,10 +33,8 @@ namespace Opdracht_2
         }
 
         void ToonWoordInRegel(string regel, string woord)
-        {
-            string temp = "";
+        {            
             int index = regel.ToUpper().IndexOf(woord.ToUpper());
-            
             Console.Write(regel.Substring(0, index));
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write(regel.Substring(index, woord.Length));
@@ -44,8 +42,7 @@ namespace Opdracht_2
             if (ZitWoordInRegel(regel.Substring(index + woord.Length), woord))
                 ToonWoordInRegel(regel.Substring(index + woord.Length), woord);
             else
-                Console.WriteLine(regel.Substring(index + woord.Length));
-            Console.WriteLine();
+                Console.WriteLine(regel.Substring(index + woord.Length));            
         }
 
         int ZoekWoordInBestand(string bestandsnaam, string woord)
@@ -57,6 +54,7 @@ namespace Opdracht_2
             {
                 if (ZitWoordInRegel(line, woord))
                 {
+                    Console.WriteLine();
                     ToonWoordInRegel(line, woord);
                     temp++;
                 }
@@ -70,6 +68,5 @@ namespace Opdracht_2
             Console.Write(vraag);
             return Console.ReadLine();
         }
-
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2C6D0CA-7BB8-4999-98D4-6456912BD1DA}</ProjectGuid>
+    <ProjectGuid>{736E3A9D-1DBE-42E1-AC72-BD9CF52A30C6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Opdracht_2</RootNamespace>
-    <AssemblyName>Opdracht 2</AssemblyName>
+    <RootNamespace>Opdracht_1</RootNamespace>
+    <AssemblyName>Opdracht 1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persoon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="trump.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

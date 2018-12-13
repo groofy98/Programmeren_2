@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BEE9FF9F-E919-4A59-915F-F6B48CADC625}</ProjectGuid>
+    <ProjectGuid>{1C555FD7-8CC3-4C68-B2F8-31123D3DB993}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Opdrachten_week_4</RootNamespace>
-    <AssemblyName>Opdrachten week 4</AssemblyName>
+    <RootNamespace>Opdracht_5</RootNamespace>
+    <AssemblyName>Opdracht 5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persoon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

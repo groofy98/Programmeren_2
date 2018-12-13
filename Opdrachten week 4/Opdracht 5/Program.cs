@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Opdracht_3
+namespace Opdracht_5
 {
     class Program
     {
@@ -24,19 +24,20 @@ namespace Opdracht_3
             try
             {
                 speelveld = LeesSpeelveld("speelvelden");
+                SchrijfSpeelveld(speelveld, "speelvelden");
             }
             catch
             {
+                Console.WriteLine("Nieuw speelveld wordt aangemaakt");
                 speelveld = new RegularCandies[9, 9];
                 InitCandies(ref speelveld);
+                SchrijfSpeelveld(speelveld, "speelvelden");
             }
             PrintCandies(speelveld);
             if (ScoreRijAanwezig(speelveld))
                 Console.WriteLine("Score rij aanwezig!");
             if (ScoreKolomAanwezig(speelveld))
-                Console.WriteLine("Score Kolom aanwezig!");
-            SchrijfSpeelveld(speelveld, "speelvelden");
-
+                Console.WriteLine("Score Kolom aanwezig!");            
             Console.ReadKey();
             Start();
         }
@@ -60,8 +61,9 @@ namespace Opdracht_3
                     file.WriteLine(temp);
                 }
                 file.Close();
+
             }
-            catch
+            finally
             {
                 file.Close();
             }
@@ -89,9 +91,9 @@ namespace Opdracht_3
             finally
             {
                 file.Close();
-                
+
             }
-            
+
 
         }
 

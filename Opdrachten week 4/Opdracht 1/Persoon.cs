@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
-namespace Opdrachten_week_4
+namespace Opdracht_1
 {
     class Persoon
     {
@@ -24,9 +25,9 @@ namespace Opdrachten_week_4
         {
             Persoon p = new Persoon();
             p.naam = n;
-            Console.WriteLine("Welkom {0}!",n);
+            Console.WriteLine("Welkom {0}!", n);
             p.woonplaats = LeesString("Waar woont u? ");
-            p.leeftijd = LeesInt("Wat is is uw leeftijd?" );
+            p.leeftijd = LeesInt("Wat is is uw leeftijd?");
             SchrijfPersoon(p, n);
             return p;
         }
@@ -40,7 +41,7 @@ namespace Opdrachten_week_4
 
         public void SchrijfPersoon(Persoon p, string bestandsNaam)
         {
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"..\\..\\" + p.naam + ".txt");
+            StreamWriter file = new System.IO.StreamWriter(@"..\\..\\" + p.naam + ".txt");
             file.WriteLine(p.naam);
             file.WriteLine(p.woonplaats);
             file.WriteLine(p.leeftijd);
@@ -49,7 +50,7 @@ namespace Opdrachten_week_4
 
         public Persoon LeesPersoonBestand(string bestandsNaam)
         {
-           
+
             try
             {
                 Persoon p = new Persoon();
@@ -61,11 +62,12 @@ namespace Opdrachten_week_4
                 Console.WriteLine("Wat leuk je weer te zien {0}", bestandsNaam);
                 return p;
             }
-            catch {
+            catch
+            {
                 return LeesPersoon(bestandsNaam);
             }
-            
-           
+
+
         }
 
         static int LeesInt(string vraag)
@@ -79,6 +81,5 @@ namespace Opdrachten_week_4
             Console.Write(vraag);
             return Console.ReadLine();
         }
-
     }
 }
