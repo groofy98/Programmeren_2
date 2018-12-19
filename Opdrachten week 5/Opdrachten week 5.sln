@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vertaling", "Vertaling\Vert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lingo", "Lingo\Lingo.csproj", "{04ACAE0D-0A3C-497F-951A-779E8C041D2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LingoLogica", "LingoLogica\LingoLogica.csproj", "{982728C8-FDC9-4BFD-BA29-C62C519D044B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{04ACAE0D-0A3C-497F-951A-779E8C041D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04ACAE0D-0A3C-497F-951A-779E8C041D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04ACAE0D-0A3C-497F-951A-779E8C041D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982728C8-FDC9-4BFD-BA29-C62C519D044B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982728C8-FDC9-4BFD-BA29-C62C519D044B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982728C8-FDC9-4BFD-BA29-C62C519D044B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982728C8-FDC9-4BFD-BA29-C62C519D044B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

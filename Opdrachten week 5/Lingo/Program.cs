@@ -9,6 +9,8 @@ namespace Lingo
 {
     class Program
     {
+        enum LetterState {Wrong, Correct, WrongPosition}
+
         static void Main(string[] args)
         {
             Program myProgram = new Program();
@@ -65,25 +67,25 @@ namespace Lingo
                 Console.WriteLine("Helaas het woord was {0}", lingoWord);
         }
 
-        int[] EvaluateWord(string playerWord, string lingoWord)
+        LetterState[] EvaluateWord(string playerWord, string lingoWord)
         {
-            int[] outcome = new int[lingoWord.Length];
+            LetterState[] outcome = new LetterState[lingoWord.Length];
             char[] pWord = playerWord.ToCharArray();
             char[] lWord = lingoWord.ToCharArray();
             for (int x = 0; x< lingoWord.Length; x++)
             {
                 if (pWord[x] == lWord[x])
-                    outcome[x] = 1;
+                    outcome[x] = LetterState.Correct;
                 else if
                     (lWord.Contains(pWord[x]))
-                    outcome[x] = 2;
+                    outcome[x] = LetterState.WrongPosition;
                 else
-                    outcome[x] = 0;
+                    outcome[x] = LetterState.Wrong;
             }
             return outcome;
         }
 
-        void DisplayResult (string playerWord, int[] result)
+        void DisplayResult (string playerWord, LetterState[] result)
         {
             char[] pWord = playerWord.ToCharArray();
             for(int i = 0; i < pWord.Length; i++)
@@ -91,13 +93,13 @@ namespace Lingo
                 
                 switch (result[i])
                 {
-                    case 1:
+                    case LetterState.Correct:
                         Console.BackgroundColor = ConsoleColor.Green;
                         break;
-                    case 2:
+                    case LetterState.WrongPosition:
                         Console.BackgroundColor = ConsoleColor.Red;
                         break;
-                    case 0:
+                    case LetterState.Wrong:
                         break;
                     default:
                         break;                    
